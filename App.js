@@ -34,10 +34,11 @@ const App = () => {
     )
   } else {
     return (
-      <View>
+      <View style={styles.container}>
         <Joke details={details}/>
         <Button 
           rounded
+          style={styles.button}
           onPress={()=>fetchJokes()}
           >
             <Text>New Joke</Text>
@@ -48,3 +49,17 @@ const App = () => {
 }
 
 export default App;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems:"center",
+    backgroundColor : "#222831"
+  },
+  button:{
+    marginTop: 30,
+    paddingHorizontal: 30,
+    alignSelf:"center"
+
+  }
+})
